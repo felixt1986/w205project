@@ -1,14 +1,15 @@
 #!/bin/bash
 
-#mkdir /data/project
-#mkdir /data/project/staging
-#mkdir /data/project/staging/mediadata
+mkdir /data/project
+mkdir /data/project/staging
+mkdir /data/project/staging/mediadata
 
-#cd /data/project/staging
-#rm rows.csv
-#wget https://data.consumerfinance.gov/api/views/s6ew-h6mp/rows.csv 
+cd /data/project/staging
+rm rows.csv
+wget https://data.consumerfinance.gov/api/views/s6ew-h6mp/rows.csv 
 
 cd /data/project/staging/mediadata
+rm *.CSV
 today=`date`
 start_ts=$(date -d "2014-01-01" '+%s')
 end_ts=$(date -d "$today" '+%s')
