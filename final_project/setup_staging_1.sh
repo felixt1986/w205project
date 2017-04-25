@@ -11,7 +11,7 @@ wget https://data.consumerfinance.gov/api/views/s6ew-h6mp/rows.csv
 cd /data/project/staging/mediadata
 rm *.CSV
 today=`date`
-start_ts=$(date -d "2014-01-01" '+%s')
+start_ts=$(date -d "2016-01-01" '+%s')
 end_ts=$(date -d "$today" '+%s')
 max=$(( ( end_ts - start_ts )/(60*60*24) ))
 for ((i=2; i <=max; ++i))
