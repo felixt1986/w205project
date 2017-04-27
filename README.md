@@ -18,7 +18,7 @@ Top_company_media_analysis_6.py : create the complaints vs media analysis table 
 
 run_create_asset_employee_table_sql_7.sh: runs the create_asset_employee_table.sql which uploads and then cleans the company name from assets_bank and num_emp_bank csv in postgres. It then creates a join table between each of these table with ccdata
 
-run_extract_table_CSV_sql_8.sh: runs the extract_table_CSV.sql which extract the below tables from postgres into CSV output
+run_extract_table_CSV_sql_8.sh: runs the extract_table_CSV.sql which extract the below tables from postgres into CSV output. All the CSV output wil be exported to /home/w205/w205project/final_project/output This is also the folder where we have stored the Tableau Link and presentation PPT 
 
 Join_assets_banks_1
 Join_num_emp_banks_1

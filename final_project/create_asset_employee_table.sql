@@ -1,10 +1,17 @@
 \c projectdatabase
 
+drop table if exists assets_banks;
+drop table if exists num_emp_banks;
+drop table if exists join_assets_banks_1;
+drop table if exists join_num_emp_banks_1;
+drop table if exists issues_count_assets;
+drop table if exists issues_count_num_emp;
+
 create table assets_banks (company varchar(200), assets_billions int);
 create table num_emp_banks (company varchar(200), num_emp int);
 
 \copy assets_banks FROM '/home/w205/w205project/final_project/non_critical_datasource/assets_banks.csv' WITH DELIMITER ',' CSV HEADER
-\copy num_emp_banks FROM '/home/w205/w205project/final_project/non_critical_datasource/num_emp_banks.csv' WITH DELIMITER ',' CSV HEADER
+\copy num_emp_banks FROM '/home/w205/w205project/final_project/non_critical_datasource/num_emp_bank.csv' WITH DELIMITER ',' CSV HEADER
 
 update assets_banks set company = 'JPMorgan Chase & Co.' where company = 'JPMorgan Chase';
 
